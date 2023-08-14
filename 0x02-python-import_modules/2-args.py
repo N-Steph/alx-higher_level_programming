@@ -3,8 +3,10 @@ if __name__ == "__main__":
     from sys import argv
     outputs = ["argument", "arguments"]
     argc = len(argv)
-    if argc == 1:
-        print("{} {}.".format((argc - 1), outputs[0]))
+    if argc == 2:
+        print("{} {}:".format((argc - 1), outputs[0]))
+    elif argc == 1:
+        print("{} {}.".format((argc - 1), outputs[1]))
     else:
         print("{} {}:".format((argc - 1), outputs[1]))
     i = 1
