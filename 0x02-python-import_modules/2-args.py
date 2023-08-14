@@ -4,9 +4,10 @@ if __name__ == "__main__":
     outputs = ["argument", "arguments"]
     argc = len(argv)
     if argc == 1:
-        print("{} {}.".format(argc, outputs[0]))
+        print("{} {}.".format((argc - 1), outputs[0]))
     else:
-        print("{} {}:".format(argc, outputs[1]))
-        i = 0
-        for argument in argv:
-            print("{}: {}".format(++i, argument))
+        print("{} {}:".format((argc - 1), outputs[1]))
+        i = 1
+        while i < argc:
+            print("{}: {}".format(i, argv[i]))
+            i += 1
