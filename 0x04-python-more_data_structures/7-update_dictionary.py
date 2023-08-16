@@ -3,6 +3,5 @@ def update_dictionary(a_dictionary, key, value):
     """
     Replaces or adds key/value in a dictionary
     """
-    new_dict = a_dictionary.copy()
-    new_dict[key] = value
-    return new_dict
+    a_dictionary[key] = value
+    return a_dictionary 
