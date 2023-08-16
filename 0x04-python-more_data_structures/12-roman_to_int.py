@@ -4,7 +4,12 @@ def roman_to_int(roman_string):
     Convert roman numeral to integer
     Return integer
     """
-    if roman_string is None or type(roman_string) is not str:
+    if (
+            roman_string is None or
+            type(roman_string) is not str or
+            len(roman_string) == 0 or
+            " " in roman_string
+            ):
         return 0
     roman_symbols = {
             'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000,
@@ -20,3 +25,8 @@ def roman_to_int(roman_string):
             ro_to_int += roman_symbols[symbol]
         prev_symbol = symbol
     return ro_to_int
+print(roman_to_int("XXXIX"))
+print(roman_to_int("CCXLVI"))
+print(roman_to_int("DCCLXXXIX"))
+print(roman_to_int("MMMCMXCIX"))
+print(roman_to_int(""))
