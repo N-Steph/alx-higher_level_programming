@@ -25,8 +25,3 @@ def roman_to_int(roman_string):
             ro_to_int += roman_symbols[symbol]
         prev_symbol = symbol
     return ro_to_int
-print(roman_to_int("XXXIX"))
-print(roman_to_int("CCXLVI"))
-print(roman_to_int("DCCLXXXIX"))
-print(roman_to_int("MMMCMXCIX"))
-print(roman_to_int(""))
