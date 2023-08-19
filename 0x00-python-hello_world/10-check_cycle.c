@@ -32,10 +32,12 @@ int check_cycle(listint_t *list)
 {
 	size_t num; /* number of nodes */
 	size_t i;
+	listint_t *node;
 
 	if (list == NULL)
 		return (0);
 	num = listint_t_len(list);
+	node = list;
 	for (i = 0; i < num; i++)
 		node = node->next;
 	if (node->next == list)
