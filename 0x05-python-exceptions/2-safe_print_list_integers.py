@@ -15,6 +15,6 @@ def safe_print_list_integers(my_list=[], x=0):
             i += 1
             pass
         else:
-            counter += 1
+            num_int += 1
             i += 1
-    return (counter)
+    return (num_int)
