@@ -16,7 +16,7 @@ class Square:
 
     @property
     def size(self):
-        """property size. Gets the property 'size' of Square object 
+        """property size. Gets the property 'size' of Square object
         Returns:
             size: size of the Square object
         """
@@ -32,7 +32,7 @@ class Square:
             raise TypeError("size must be an integer")
         elif (value < 0):
             raise ValueError("size must be >= 0")
-        self.__size = value 
+        self.__size = value
 
     def area(self):
         """Computes the area of a square object"""
