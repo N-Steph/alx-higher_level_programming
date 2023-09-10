@@ -10,7 +10,11 @@ class Rectangle:
         height: defined the height of Rectangle object
     """
     def __init__(self, width=0, height=0):
-        """Initializes Rectangle object when it is creates"""
+        """Initializes Rectangle object when it is creates
+        Args:
+            width (int): integer that sets the with of the Rectangle instance
+            height (int): integer that sets the height of the Rectangle instance
+        """
         self.width = width
         self.height = height
 
@@ -41,7 +45,7 @@ class Rectangle:
         Returns:
             height: with of the Rectangle instance
         """
-        return self.__width
+        return self.__height
 
     @height.setter
     def height(self, value):
