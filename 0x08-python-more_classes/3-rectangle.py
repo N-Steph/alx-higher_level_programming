@@ -81,7 +81,7 @@ class Rectangle:
 
     def __str__(self):
         """Defines the string representation of Rectangle Object"""
-        if self.__height == 0 or self.__height == 0:
+        if self.__height == 0 or self.__width == 0:
             return ""
         for row in range(0, self.__width):
             for column in range(0, self.__height):
