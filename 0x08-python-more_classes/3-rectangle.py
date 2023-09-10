@@ -83,9 +83,9 @@ class Rectangle:
         """Defines the string representation of Rectangle Object"""
         if self.__height == 0 or self.__width == 0:
             return ""
-        for row in range(0, self.__width):
-            for column in range(0, self.__height):
+        for row in range(0, self.__height):
+            for column in range(0, self.__width):
                 print("#", end="")
-            if row < (self.__width - 1):
+            if row < (self.__height - 1):
                 print()
         return ""
