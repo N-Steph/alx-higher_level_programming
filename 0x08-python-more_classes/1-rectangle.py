@@ -12,8 +12,8 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """Initializes Rectangle object when it is creates
         Args:
-            width (int): integer that sets the with of the Rectangle instance
-            height (int): integer that sets the height of the Rectangle instance
+            width (int): integer that sets the width of Rectangle instance
+            height (int): integer that sets the height of Rectangle instance
         """
         self.width = width
         self.height = height
