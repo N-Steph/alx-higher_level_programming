@@ -86,5 +86,6 @@ class Rectangle:
         for row in range(0, self.__width):
             for column in range(0, self.__height):
                 print("#", end="")
-            print()
+            if row < (self.__width - 1):
+                print()
         return ""
