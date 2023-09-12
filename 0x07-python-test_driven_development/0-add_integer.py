@@ -5,14 +5,14 @@
 def add_integer(a, b=98):
     """Adds two integers and returns the result"""
     num_type = [int, float]
-    if type(a) not in num_type:
+    if a is None or type(a) not in num_type:
         raise TypeError("a must be an integer")
-    else:
-        if type(a) is num_type[1]:
-            a = int(a)
     if type(b) not in num_type:
         raise TypeError("b must be an integer")
-    else:
-        if type(b) is num_type[1]:
+    if type(a) is num_type[1] or type(b) is num_type[1]:
+        try:
+            a = int(a)
             b = int(b)
+        except Exception:
+            return
     return a + b
