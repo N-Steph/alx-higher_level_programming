@@ -1,0 +1,176 @@
+=======================================================
+Testing add_integer function from 0-add_integer.py file
+=======================================================
+
+``add_integer()`` returns the sum of its arguments.
+For numbers, that value is equivalent to using the ``+`` operator.
+
+a is an integer 
+================
+::
+	>>> from test import add_integer 
+	>>> add_integer(3, 4)
+	7
+
+	>>> add_integer(5, 2.2)
+	7
+
+	>>> add_integer(8, "string")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer(19, True)
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer(94, False)
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer(-14, -39)
+	-53
+
+	>>> add_integer(-15, 65)
+	50
+
+	>>> add_integer(54, -37)
+	17
+
+	>>> add_integer(-23, -72.84)
+	-95
+
+	>>> add_integer(-34, "string")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer(-19, True)
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer(-86, False)
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer(17)
+	115
+
+	>>> add_integer(-663)
+	-565
+
+a is a float
+============ 
+	>>> add_integer(3.75, 4)
+	7
+
+	>>> add_integer(8.4, 2.2)
+	10
+
+	>>> add_integer(8.23, "string")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer(19.24, True)
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer(94.67, False)
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer(-14.0, -39)
+	-53
+
+	>>> add_integer(-15.123, 65)
+	50
+
+	>>> add_integer(54.44, -37)
+	17
+
+	>>> add_integer(-23.07, -72.84)
+	-95
+
+	>>> add_integer(-34.0, "string")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer(-19.1, True)
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer(-86.8, False)
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer(15.3)
+	113
+
+	>>> add_integer(-71.94)
+	27
+
+a is a string
+=============
+	>>> add_integer("string", 4)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer("string", 2.2)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer("string", "string")
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer("string", True)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer("string", False)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer("string", -39)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer("string", -72.84)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer("string")
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+a is a boolean
+==============
+	>>> add_integer(True, 4)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(False, 2.2)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(True, "string")
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(False, True)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(True, False)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(False, -39)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(True, -72.84)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(False)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
