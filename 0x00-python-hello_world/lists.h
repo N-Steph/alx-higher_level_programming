@@ -2,6 +2,7 @@
 #define LISTS_H
 
 #include <stdlib.h>
+#define SIZE 1024
 
 /**
  * struct listint_s - singly linked list
