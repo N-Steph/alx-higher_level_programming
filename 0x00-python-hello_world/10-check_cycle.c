@@ -8,20 +8,25 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *current_node, *test_node;
+	listint_t *current_node;
+	listint_t *address[SIZE];
+	int i, j;
 
+	for (i = 0; i < SIZE; i++)
+		address[i] = NULL;
 	if (list == NULL)
 		return (0);
 	current_node = list;
+	j = 0;
 	while (current_node != NULL)
 	{
-		test_node = current_node;
-		while (test_node != NULL)
+		for (i =0; i < SIZE; i++)
 		{
-			if (current_node == test_node->next)
+			if (address[i] == current_node)
 				return (1);
-			test_node = test_node->next;
 		}
+		address[j] = current_node;
+		j++;
 		current_node = current_node->next;
 	}
 	return (0);
