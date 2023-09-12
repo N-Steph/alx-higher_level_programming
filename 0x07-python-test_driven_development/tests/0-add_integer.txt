@@ -8,7 +8,7 @@ For numbers, that value is equivalent to using the ``+`` operator.
 a is an integer 
 ================
 ::
-	>>> from 0-add_integer import add_integer 
+	>>> from test_1 import add_integer 
 	>>> add_integer(3, 4)
 	7
 
