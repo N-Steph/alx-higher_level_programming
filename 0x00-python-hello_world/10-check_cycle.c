@@ -20,7 +20,7 @@ int check_cycle(listint_t *list)
 	j = 0;
 	while (current_node != NULL)
 	{
-		for (i =0; i < SIZE; i++)
+		for (i =0; i < j; i++)
 		{
 			if (address[i] == current_node)
 				return (1);
