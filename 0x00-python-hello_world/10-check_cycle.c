@@ -12,8 +12,7 @@ int check_cycle(listint_t *list)
 	listint_t *address[SIZE];
 	int i, j;
 
-	for (i = 0; i < SIZE; i++)
-		address[i] = NULL;
+	address[0] = NULL;
 	if (list == NULL)
 		return (0);
 	current_node = list;
