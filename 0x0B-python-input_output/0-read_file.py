@@ -7,5 +7,10 @@ def read_file(filename=""):
     Args:
         filename (string): path + filename to read
     """
-    with open(filename, mode='r', encoding='utf-8') as file_open:
-        print(file_open.read())
+    if filename is None or filename == "" or type(filename) is not str:
+        return
+    try:
+        with open(filename, mode='r', encoding='utf-8') as file_open:
+            print(file_open.read())
+    except FileNotFoundError:
+        print("No such file")
