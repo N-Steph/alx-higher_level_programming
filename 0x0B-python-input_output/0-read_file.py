@@ -11,6 +11,6 @@ def read_file(filename=""):
         return
     try:
         with open(filename, mode='r', encoding='utf-8') as file_open:
-            print(file_open.read())
+            print(file_open.read(), end="")
     except FileNotFoundError:
         print("No such file")
