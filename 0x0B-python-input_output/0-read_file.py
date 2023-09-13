@@ -9,8 +9,5 @@ def read_file(filename=""):
     """
     if filename is None or filename == "" or type(filename) is not str:
         return
-    try:
-        with open(filename, mode='r', encoding='utf-8') as file_open:
-            print(file_open.read(), end="")
-    except FileNotFoundError as e:
-        print(e.args[1])
+    with open(filename, mode='r', encoding='utf-8') as file_open:
+        print(file_open.read(), end="")
