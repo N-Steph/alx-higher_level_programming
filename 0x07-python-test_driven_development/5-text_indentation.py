@@ -14,8 +14,13 @@ def text_indentation(text):
 
     if type(text) is not str:
         raise TypeError("text must be a string")
-    for char in text:
-        print("{}".format(char), end="")
-        if char in punctuation:
+    i = 0
+    while i < len(text):
+        print("{}".format(text[i]), end="")
+        if text[i] in punctuation:
             print()
             print()
+            if text[i + 1] == " ":
+                i += 2
+                continue
+        i += 1
