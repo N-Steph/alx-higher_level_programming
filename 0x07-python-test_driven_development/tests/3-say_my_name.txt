@@ -1,0 +1,44 @@
+=======================================================
+Testing say_my_name function from 3-say_my_name.py file
+=======================================================
+
+``say_my_name()`` prints a name.
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+first_name is not a string
+==========================
+::
+	>>> say_my_name(2, "steph")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	>>> say_my_name(True, "steph")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	>>> say_my_name(9.44, "steph")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+last_name is not a string
+=========================== 
+::
+	>>> say_my_name("Xing", 5)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+	>>> say_my_name("Xing", False)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+	>>> say_my_name("Xing", 4.5) 
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+
+first_name and last_name are not strings
+==========================================
+::
+	>>> say_my_name("Xing", "Shaolin") 
+	My name is Xing Shaolin
