@@ -24,7 +24,7 @@ text is not a string
 text is a string
 ===============
 ::
-	>>> text_indentation("hello John.How are you?Which of these programming languages you like more:Python, C, Javascript")
+	>>> text_indentation("hello John.How are you?Which of these programming languages you like more: Python, C, Javascript")
 	hello John.
 	<BLANKLINE>
 	How are you?
