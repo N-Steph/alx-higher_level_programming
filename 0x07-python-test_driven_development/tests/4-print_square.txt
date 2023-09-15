@@ -1,0 +1,47 @@
+=======================================================
+Testing print_square function from 4-print_square.py file
+=======================================================
+
+``print_square(size)`` prints a square of size 'size'.
+
+	>>> print_square = __import__('4-print_square').print_square
+
+size is not an integer
+==========================
+::
+	>>> print_square("h")
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+	>>> print_square(True)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+	>>> print_square(9.44)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+size is negative
+=========================== 
+::
+	>>> print_square(-5)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+	>>> print_square(-4.5) 
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+size is 0
+=========
+::
+	>>> print_square(0)
+
+size is integer greater than or equal 0
+==========================================
+::
+	>>> print_square(4) 
+	####
+	####
+	####
+	####
