@@ -47,7 +47,7 @@ def handle_div_exception(div):
         raise ZeroDivisionError("division by zero")
 
 
-def matrix_divided(matrix, div):
+def matrix_divided(matrix=[[1]], div=1):
     """
     Performs the division of of all elements of 'matrix
     Returns a new matrix containgin the results of the
