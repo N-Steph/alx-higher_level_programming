@@ -11,6 +11,7 @@ import json
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
+
 def add_item(filename, my_list):
     """Add items to a file"""
     try:
@@ -25,6 +26,7 @@ def add_item(filename, my_list):
     for i in range(1, len(my_list)):
         des_list.append(my_list[i])
     save_to_json_file(des_list, 'add_item.json')
+
 
 if __name__ == "__main__":
     add_item('add_item.json', sys.argv)
