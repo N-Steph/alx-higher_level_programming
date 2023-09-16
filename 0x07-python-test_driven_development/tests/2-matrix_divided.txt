@@ -60,3 +60,32 @@ div is 0
 	>>> matrix_divided(matrix, 0)
 	Traceback (most recent call last):
 	ZeroDivisionError: division by zero
+
+div missing
+===========
+::
+	>>> matrix_divided(matrix)
+	Traceback (most recent call last):
+	TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+matrix missing
+===============
+::
+`	>>> matrix_divided(div=3)
+	Traceback (most recent call last):
+	TypeError: matrix_divided() missing 1 required positional argument: 'matrix'
+
+
+div and matrix missing
+======================
+::	
+	>>> matrix_divided()
+	Traceback (most recent call last):
+	TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+
+div is float(inf)
+================
+::
+	>>> matrix_divided(matrix, 10E100000000000000000000000000000000000000000000000) 
+	[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
