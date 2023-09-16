@@ -90,7 +90,10 @@ class Rectangle:
             return ""
         for row in range(0, self.__height):
             for column in range(0, self.__width):
-                print("{}".format(Rectangle.print_symbol), end="")
+                if self.print_symbol:
+                    print("{}".format(self.print_symbol), end="")
+                else:
+                    print("{}".format(Rectangle.print_symbol), end="")
             if row < (self.__height - 1):
                 print()
         return ""
