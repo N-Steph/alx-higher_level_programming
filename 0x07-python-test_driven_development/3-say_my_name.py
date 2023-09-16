@@ -5,7 +5,7 @@ say_my_name
 """
 
 
-def say_my_name(first_name="", last_name=""):
+def say_my_name(first_name, last_name):
     """
     Prints the a string to the stdout containing the first_name
     and last_name argument passed to it.
