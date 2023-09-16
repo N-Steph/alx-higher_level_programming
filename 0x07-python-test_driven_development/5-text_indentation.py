@@ -18,11 +18,10 @@ def text_indentation(text):
     while i < len(text):
         while text[i] == " " or text[i] == "    ":
             i += 1
-        print("{}".format(text[i]), end="")
-        if text[i] in punctuation:
+        while i < len(text) and text[i] not in punctuation:
+            print("{}".format(text[i]), end="")
+            i += 1
+        if i < len(text):
             print()
             print()
-            if text[i + 1] == " " or text[i] == "   ":
-                i += 2
-                continue
         i += 1
