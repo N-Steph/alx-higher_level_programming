@@ -22,6 +22,8 @@ def text_indentation(text):
             print("{}".format(text[i]), end="")
             i += 1
         if i < len(text):
+            if text[i] in punctuation:
+                print("{}".format(text[i]), end="")
             print()
             print()
         i += 1
