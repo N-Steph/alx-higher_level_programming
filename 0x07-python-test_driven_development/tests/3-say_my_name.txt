@@ -42,3 +42,10 @@ first_name and last_name are not strings
 ::
 	>>> say_my_name("Xing", "Shaolin") 
 	My name is Xing Shaolin
+
+no argument test
+===============
+::
+	>>> say_my_name()
+	Traceback (most recent call last):
+	TypeError: say_my_name() missing 2 required positional arguments: 'first_name' and 'last_name'
