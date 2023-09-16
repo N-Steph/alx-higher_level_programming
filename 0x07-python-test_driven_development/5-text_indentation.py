@@ -16,15 +16,13 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     i = 0
     while i < len(text):
-        if i == 0:
-            if text[i] == " ":
-                i += 1
-                continue
+        while text[i] == " " or text[i] == "    ":
+            i += 1
         print("{}".format(text[i]), end="")
         if text[i] in punctuation:
             print()
             print()
-            if text[i + 1] == " ":
+            if text[i + 1] == " " or text[i] == "   ":
                 i += 2
                 continue
         i += 1
