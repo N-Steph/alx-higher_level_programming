@@ -83,3 +83,13 @@ mix str and float
 	>>> new_list.print_sorted()
 	Traceback (most recent call last):
 	TypeError: '<' not supported between instances of 'str' and 'float'
+
+mix str and str
+===============
+::
+	>>> str_list = MyList()
+	>>> str_list.append("test")
+	>>> str_list.append("this")
+	>>> str_list.append("one")
+	>>> str_list.print_sorted()
+	['one', 'test', 'this']
