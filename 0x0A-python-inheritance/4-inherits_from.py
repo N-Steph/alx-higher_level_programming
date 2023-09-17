@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """Definition of function that checks if an objects class is is a subclass\
  of another one
 """
