@@ -49,6 +49,23 @@ test integer_validator
 	Traceback (most recent call last):
 	ValueError: be must be greater than 0
 
-	>>> base_geo.integer_validator("careful", 0)
+	>>> base_geo.integer_validator()
 	Traceback (most recent call last):
-	ValueError: careful must be greater than 0
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+	>>> base_geo.integer_validator("careful", [0])
+	Traceback (most recent call last):
+	TypeError: careful must be an integer
+
+	>>> base_geo.integer_validator("careful", (0,))
+	Traceback (most recent call last):
+	TypeError: careful must be an integer
+	>>> base_geo.integer_validator("careful", {0})
+	Traceback (most recent call last):
+	TypeError: careful must be an integer
+	>>> base_geo.integer_validator("careful", None)
+	Traceback (most recent call last):
+	TypeError: careful must be an integer
+	>>> base_geo.integer_validator("careful")
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
