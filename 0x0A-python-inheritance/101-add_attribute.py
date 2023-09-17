@@ -9,4 +9,7 @@ def add_attribute(obj, attr, value):
     object_type = [int, float, str, bool, list, set, tuple, None]
     if type(obj) in object_type:
         raise TypeError("can't add new attribute")
+    if '__slot__' in dir(obj):
+        if attr not in obj.__slot__:
+            raise TypeError("can't add new attribute")
     obj.__dict__[attr] = value
