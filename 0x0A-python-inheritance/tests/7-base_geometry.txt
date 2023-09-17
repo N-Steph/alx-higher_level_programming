@@ -1,0 +1,54 @@
+==========================
+Testing BaseGeometry class 
+==========================
+
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Create a BaseGeometry instance
+==============================
+::
+	>>> base_geo = BaseGeometry()
+
+Print
+=====
+::
+	>>> print(base_geo) #doctest: +ELLIPSIS
+	<7-base_geometry.BaseGeometry object at 0x...>
+
+check type
+==========
+::
+	>>> type(base_geo)
+	<class '7-base_geometry.BaseGeometry'>
+
+test area method
+================ 
+::
+	>>> base_geo.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented
+
+test integer_validator
+======================
+::
+	>>> base_geo.integer_validator("this", 2)
+	>>> base_geo.integer_validator("is", True)
+	Traceback (most recent call last):
+	TypeError: is must be an integer
+
+	>>> base_geo.integer_validator("a", "true")
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> base_geo.integer_validator("success", 4.1)
+	Traceback (most recent call last):
+	TypeError: success must be an integer
+
+	>>> base_geo.integer_validator("be", -4)
+	Traceback (most recent call last):
+	ValueError: be must be greater than 0
+
+	>>> base_geo.integer_validator("careful", 0)
+	Traceback (most recent call last):
+	ValueError: careful must be greater than 0
