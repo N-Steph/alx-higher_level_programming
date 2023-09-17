@@ -10,9 +10,6 @@ def add_attribute(obj, attr, value):
     attr_exception = TypeError("can't add new attribute")
     if type(obj) in object_type:
         raise attr_exception
-    if 'slots' in dir(obj):
-        if attr not in obj.slots:
-            raise attr_exception
     if '__slots__' in dir(obj):
         if attr not in obj.__slots__:
             raise attr_exception
