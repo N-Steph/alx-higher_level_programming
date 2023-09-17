@@ -49,6 +49,10 @@ test integer_validator
 	Traceback (most recent call last):
 	ValueError: be must be greater than 0
 
+	>>> base_geo.integer_validator("be", 0)
+	Traceback (most recent call last):
+	ValueError: be must be greater than 0
+
 	>>> base_geo.integer_validator()
 	Traceback (most recent call last):
 	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
