@@ -16,6 +16,7 @@ class Square(Rectangle):
         """Initialze the Square instance.
         self.__size: instance variable, size of the square
         """
+        super().integer_validator("size", size)
         self.__size = size
 
     def area(self):
