@@ -33,7 +33,7 @@ class Rectangle(Base):
                 raise ValueError("{} must be >= 0".format(key))
 
         super().__init__(id)
-        self.__width = width 
+        self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
@@ -97,3 +97,12 @@ class Rectangle(Base):
     def area(self):
         """Returns the area of a Rectangle instance"""
         return self.__width * self.__height
+
+    def display(self):
+        """Displays the Rectangle instance to stdout using '#'"""
+        for height in range(self.__height):
+            for width in range(self.__width):
+                print("#", end="")
+            print()
+
+    def __str
