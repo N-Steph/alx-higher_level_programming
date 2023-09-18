@@ -2,7 +2,7 @@
 """Implementation of Rectangle class"""
 
 
-Base = __import__('base').Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -140,3 +140,8 @@ class Rectangle(Base):
                     self.x = value
                 if key == "y":
                     self.y = value
+
+    def to_dictionary(self):
+        """Returns the dictionary representtion of a Rectangle instance"""
+        return {'id': self.id, 'width': self.width, 'height': self.height,
+                'x': self.x, 'y': self.y}
