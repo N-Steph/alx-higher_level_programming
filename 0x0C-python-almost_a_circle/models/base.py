@@ -3,6 +3,7 @@
 
 
 import json
+import csv
 
 
 class Base:
@@ -69,4 +70,36 @@ class Base:
             for objs in list_objs:
                 list_objs[i] = cls.create(**objs)
                 i += 1
+            return list_objs
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Writes 'list_objs' data to a CSV file"""
+        filename = "{}.csv".format(cls.__name__)
+        fields = []
+        if cls.__name__ == "Rectangle":
+            fields = ["id", "width", "height", "x", "y"]
+        elif cls.__name__ == "Square":
+            fields = ["id", "size", "x", "y"]
+
+        with open(filename, mode='w', encoding='utf-8') as csv_file:
+            csv_writer = csv.DictWriter(csv_file, fieldnames=fields)
+            csv_writer.writeheader()
+            for objs in list_objs:
+                csv_writer.writerow(objs.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Returns a list containing the dictionary representation of object
+        after reading from CSV file.
+        """
+        filename = "{}.csv".format(cls.__name__)
+
+        with open(filename, mode='r', encoding='utf-8') as csv_file:
+            csv_reader = csv.DictReader(csv_file)
+            list_objs = []
+            for row in csv_reader:
+                for key, value in row.items():
+                    row[key] = int(value)
+                list_objs.append(cls.create(**row))
             return list_objs
