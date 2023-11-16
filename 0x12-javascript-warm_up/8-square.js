@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const { argv } = require('node:process');
+const argv = process.argv;
 const size = parseInt(argv[2]);
 if (argv[2] === undefined || isNaN(size)) {
   console.log('Missing size');
