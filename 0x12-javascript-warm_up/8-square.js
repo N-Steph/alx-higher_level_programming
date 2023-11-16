@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 const { argv } = require('node:process');
 const size = parseInt(argv[2]);
 if (argv[2] === undefined || isNaN(size)) {

@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 const { argv } = require('node:process');
 for (let i = 0; i < 2; i++) {
   argv.shift();
