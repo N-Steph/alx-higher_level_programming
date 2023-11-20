@@ -22,7 +22,6 @@ if __name__ == "__main__":
         print(row[1], end="")
         if counter != len(rows):
             print(", ", end="")
-        else:
-            print()
+    print()
     cur.close()
     db_connect.close()
