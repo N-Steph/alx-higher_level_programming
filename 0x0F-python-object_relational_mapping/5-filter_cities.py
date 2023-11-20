@@ -9,16 +9,17 @@ if __name__ == "__main__":
     db_connect = connect(user=argv[1], password=argv[2], db=argv[3],
                          host="localhost", port=3306)
     cur = db_connect.cursor()
-    cur.execute("""SELECT DISTINCT cities.name FROM cities JOIN states
-                   WHERE cities.state_id = (
+    argument = argv[4].split("'")[0]
+    cur.execute("""SELECT DISTINCT cities.id, cities.name
+                   FROM cities JOIN states
+                   WHERE cities.state_id IN (
                    SELECT states.id FROM states WHERE states.name = "{}")
-                   """.format(argv[4]))
+                   ORDER BY cities.id ASC""".format(argument))
     rows = cur.fetchall()
     counter = 0
     for row in rows:
         counter += 1
-        for col in row:
-            print(col, end="")
+        print(row[1], end="")
         if counter != len(rows):
             print(", ", end="")
         else:
