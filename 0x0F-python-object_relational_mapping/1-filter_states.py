@@ -10,7 +10,7 @@ if __name__ == "__main__":
                          host="localhost", port=3306)
     cur = db_connect.cursor()
     cur.execute("SELECT id, name 
-                 FROM states WHERE UPPER(name) LIKE UPPER('N%')")
+                 FROM states WHERE name LIKE BINARY'N%'")
     rows = cur.fetchall()
     for row in rows:
         print(row)
