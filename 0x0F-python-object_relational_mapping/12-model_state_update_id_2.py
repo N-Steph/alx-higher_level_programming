@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Adding State object "Louisiana" to the database hbtn_0e_6_usa"""
+"""Updating a State object of the database hbtn_0e_6_usa"""
 
 from sys import argv
 from model_state import Base, State
