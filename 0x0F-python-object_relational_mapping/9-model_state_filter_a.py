@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""Script that prints the first State object
-from the database hbtn_0e_6_usa
-"""
+"""Script that lists all State object containing the letter a"""
 
 from sys import argv
 from model_state import Base, State
