@@ -18,8 +18,8 @@ if __name__ == "__main__":
     engine.connect()
     Session = sessionmaker(bind=engine)
     session = Session()
-    result = session.query(State.id, State.name).filter(State.id == 1).all()
-    if len(result) == 0:
+    result = session.query(State.id, State.name).filter(State.id == 1)
+    if result is None:
         print("Nothing")
     else:
         print(str(result[0][0]) + ": " + result[0][1])
