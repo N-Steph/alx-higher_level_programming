@@ -9,7 +9,8 @@ from sqlalchemy.orm import Session, sessionmaker
 if __name__ == "__main__":
     # first step of connecting to a database
     # Create an engine
-    data_source_inf = "mysql+mysqldb://root:root@localhost:3306/hbtn_0e_6_usa"
+    data_source_inf = """mysql+mysqldb://{}:{}@localhost:
+                         3306/{}""".format(argv[1], argv[2], argv[3])
     engine = create_engine(data_source_inf)
     # connecting the database
     engine.connect()
