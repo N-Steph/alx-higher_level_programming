@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """this module contain the definition of the find_peak function"""
 
 
