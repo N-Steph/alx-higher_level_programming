@@ -10,6 +10,8 @@ if (process.argv.length === 2 || process.argv.length === 3) {
     if (number > biggest) {
       secondBiggest = biggest;
       biggest = number;
+    } else if (number > secondBiggest) {
+      secondBiggest = number;
     }
   }
   console.log(secondBiggest);
