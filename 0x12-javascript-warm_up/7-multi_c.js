@@ -1,8 +1,6 @@
 #!/usr/bin/node
 
-const { argv } = require('node:process');
-
-const number = Number(argv[2]);
+const number = Number(process.argv[2]);
 
 if (isNaN(number)) {
   console.log('Missing number of occurences');
