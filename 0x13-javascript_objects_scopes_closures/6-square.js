@@ -1,37 +1,14 @@
 #!/usr/bin/node
+const Square_ = require('./5-square');
 
-class Rectangle {
-  constructor (w, h) {
-    if (w > 0 && h > 0) {
-      this.width = w;
-      this.height = h;
-    }
-  }
-
+module.exports = class Square extends Square_ {
   print (c = 'X') {
-    for (let i = 0; i < this.height; i++) {
-      for (let j = 0; j < this.width; j++) {
+    for (let i = 0; i < this.width; i++) {
+      for (let j = 0; j < this.height; j++) {
         process.stdout.write(c);
       }
       console.log();
     }
-  }
-
-  rotate () {
-    const tmp = this.width;
-    this.width = this.height;
-    this.height = tmp;
-  }
-
-  double () {
-    this.width = this.width * 2;
-    this.height = this.height * 2;
-  }
-}
-
-module.exports = class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
   }
 
   charPrint (c) {
