@@ -11,7 +11,6 @@ fs.readFile(process.argv[2], 'utf-8', (err, data) => {
     // writing the content of first and second file to a third
     fs.writeFile(process.argv[4], value, (err) => {
       if (err) throw err;
-      console.log('The file has been saved!');
     });
   });
 });
