@@ -16,7 +16,7 @@ if __name__ == '__main__':
                WHERE BINARY cities.state_id = (\
                SELECT states.id \
                FROM states \
-               WHERE states.name = %s)"""
+               WHERE states.name = %s) ORDER BY cities.id"""
     cur.execute(query, (sys.argv[4],))
     rows = cur.fetchall()
     counter = 1
