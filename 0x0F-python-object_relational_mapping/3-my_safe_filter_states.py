@@ -11,7 +11,7 @@ import sys
 if __name__ == '__main__':
     db = MySQLdb.connect('localhost', sys.argv[1], sys.argv[2], sys.argv[3])
     cur = db.cursor()
-    query = "SELECT * FROM states WHERE BINARY name = %s")
+    query = "SELECT * FROM states WHERE BINARY name = %s"
     # execute sql query
     cur.execute(query, (sys.argv[4),))
     row = cur.fetchall()  # Returns a list of tuple
