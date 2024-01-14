@@ -13,7 +13,7 @@ if __name__ == '__main__':
     cur = db.cursor()
     query = """SELECT cities.name \
                FROM cities \
-               WHERE cities.state_id = (\
+               WHERE BINARY cities.state_id = (\
                SELECT states.id \
                FROM states \
                WHERE states.name = %(arg)s)"""
