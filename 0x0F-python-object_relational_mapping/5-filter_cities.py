@@ -16,8 +16,8 @@ if __name__ == '__main__':
                WHERE cities.state_id = (\
                SELECT states.id \
                FROM states \
-               WHERE states.name = %s)"""
-    cur.execute(query, (sys.argv[4],))
+               WHERE states.name = %(arg)s)"""
+    cur.execute(query, {'arg': sys.argv[4]})
     rows = cur.fetchall()
     counter = 1
     for row in rows:
