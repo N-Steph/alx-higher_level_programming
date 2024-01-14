@@ -13,7 +13,7 @@ if __name__ == '__main__':
     cur = db.cursor()
     query = "SELECT * FROM states WHERE BINARY name = %s"
     # execute sql query
-    cur.execute(query, (sys.argv[4),))
+    cur.execute(query, (sys.argv[4],))
     row = cur.fetchall()  # Returns a list of tuple
     for row in row:
         print(row)
