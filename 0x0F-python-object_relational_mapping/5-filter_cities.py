@@ -21,7 +21,7 @@ if __name__ == '__main__':
     rows = cur.fetchall()
     counter = 1
     for row in rows:
-        if counter < 5:
+        if counter < len(rows):
             print(row[0] + ', ', end="")
         else:
             print(row[0])
