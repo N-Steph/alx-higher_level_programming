@@ -14,7 +14,7 @@ if __name__ == '__main__':
         data = {'q': ""}
     else:
         data = {'q': argv[1]}
-    response = requests.get('http://0.0.0.0:5000/search_user', param=data)
+    response = requests.get('http://0.0.0.0:5000/search_user', params=data)
     try:
         json_data = response.json()
         print("[{}] {}".format(json_data['id'], json_data['name']))
