@@ -1,0 +1,2 @@
+# Complexity of find_peak function algorithm
+O(log(n))
