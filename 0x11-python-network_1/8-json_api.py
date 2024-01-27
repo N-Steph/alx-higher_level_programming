@@ -15,7 +15,6 @@ if __name__ == '__main__':
     else:
         letter = {'q': argv[1]}
     response = requests.post('http://0.0.0.0:5000/search_user', data=letter)
-    json_data = response.json()
     try:
         json_data = response.json()
     except ValueError:
