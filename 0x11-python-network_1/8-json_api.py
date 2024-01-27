@@ -11,14 +11,14 @@ from sys import argv
 
 if __name__ == '__main__':
     if len(argv) < 2:
-        data = {'q': ""}
+        letter = {'q': ""}
     else:
-        data = {'q': argv[1]}
-    response = requests.get('http://0.0.0.0:5000/search_user', params=data)
+        letter = {'q': argv[1]}
+    response = requests.post('http://0.0.0.0:5000/search_user', data=letter)
     try:
         json_data = response.json()
         print("[{}] {}".format(json_data['id'], json_data['name']))
-    except requests.exceptions.JSONDecodeError:
+    except requests.exceptions:
         print("Not a valid JSON")
     else:
         print("No result")
