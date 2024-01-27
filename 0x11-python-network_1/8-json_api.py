@@ -15,10 +15,12 @@ if __name__ == '__main__':
     else:
         letter = {'q': argv[1]}
     response = requests.post('http://0.0.0.0:5000/search_user', data=letter)
+    json_data = response.json()
     try:
         json_data = response.json()
-        print("[{}] {}".format(json_data['id'], json_data['name']))
-    except requests.exceptions:
+    except ValueError:
         print("Not a valid JSON")
-    else:
+    if len(json_data) == 0:
         print("No result")
+    else:
+        print("[{}] {}".format(json_data['id'], json_dat['name']))
