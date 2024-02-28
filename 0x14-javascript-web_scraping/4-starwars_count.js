@@ -13,7 +13,7 @@ request(urlFilms, function (error, response, body) {
     for (const movie of movieList) {
       const allCharacters = movie.characters;
       for (const character of allCharacters) {
-          if (character.includes(ID)) {
+        if (character.includes(ID)) {
           numberOfMovies++;
         }
       }
